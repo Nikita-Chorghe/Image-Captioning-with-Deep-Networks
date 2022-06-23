@@ -29,7 +29,7 @@ Run the python code using the following command (make sure you are in image-capt
 ## INTRODUCTION
 Image captioning has made tremendous progress recently.It takes an input and gives text describing the content of the photo. It takes photo as input and outputs encoded representation of it that captures crucial features. This uses CNN architecture. Architecture consists of several CNN blocks which extracts various features from the image in different layer and eventually identifies elements in the image. After this sequence decoder outputs a sequence of tokens that describes the photo. It is basically Recurrent Network model consisting of a stack of LSTM layers fed by an Embedding layer. CNN process the image and LSTM operates on the sequence generated. Output of these two is combined in together with multi-model layer. 
 
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/word_graph.jpg"></img>
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/word_graph.jpg"  width="500" height="500"></img>
 
 ## II. INTRODUCTION AND BACKGROUND WORK
 
@@ -94,7 +94,7 @@ b) We are initially training the CNN using preloaded MNIST data so that the CNN 
 
 c) We are then passing the previously processed 3 * 112 * 112 images through the trained CNN to generate feature vector for RNN to consume.
 
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/LSTM.png"></img>
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/LSTM.png"  width="500" height="500"></img>
 
 ## USAGE OF THE TRAINED MODEL
  An image is passed as the CNN input and the features are extracted from the image using CNN. These extracted features are passed as input for forward pass of RNN's first LSTM unit and the input of this unit is our keyword startseq. Now the predicted RNN output is then compared with the entire vocabulary. We find the CosineSimilarity of the predicted vector with all the word vectors in vocabulary. The word with max similarity is then picked and printed. Now this becomes the input of the next LSTM and so on. We set a limit at 25 words maximum per sentence if endseq is not encountered before.
@@ -111,7 +111,7 @@ c) We are then passing the previously processed 3 * 112 * 112 images through the
 
 The results for the images listed [21164875.jpg, 21166859.jpg, 31720680.jpg, 86549526.jpg, 70995350.jpg] are shown:
 
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/Result.png></img>
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/Result.png"></img>
 
 
 
