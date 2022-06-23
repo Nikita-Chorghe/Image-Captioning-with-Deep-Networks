@@ -100,7 +100,7 @@ c) We are then passing the previously processed 3 * 112 * 112 images through the
 The results for the images listed [21164875.jpg, 21166859.jpg, 31720680.jpg, 86549526.jpg, 70995350.jpg] are shown:
 
 
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/1.jpg"  width="50" height="60"></img>
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/1.jpg"  width="500" height="600"></img>
 <img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/2.jpg" ></img>
 <img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/3.jpg"></img>
 <img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/4.jpg"></img>
