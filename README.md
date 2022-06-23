@@ -103,11 +103,11 @@ c) We are then passing the previously processed 3 * 112 * 112 images through the
  We have done multiple experiments by changing the size of our dataset. Due to the high complexity of the model architecture, the training time was very high. Our model took over 5 hours to run 10 iterations on dataset of 200 images. Unfortunately as a consequence of high training time, we limited our iteration count to 100. We tried 4 different sizes of dataset. The sizes used are [50, 200, 700, 1000].
  
 
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/1.jpg"  width="200" height="200"></img>
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/2.jpg" width="200" height="200"></img>
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/3.jpg" width="200" height="200"></img>
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/4.jpg" width="200" height="200"></img>
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/5.jpg" width="200" height="200"></img>
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/1.jpg" width="300" height="300"></img>
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/2.jpg" width="300" height="300"></img>
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/3.jpg" width="300" height="300"></img>
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/4.jpg" width="300" height="300"></img>
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/5.jpg" width="300" height="300"></img>
 
 The results for the images listed [21164875.jpg, 21166859.jpg, 31720680.jpg, 86549526.jpg, 70995350.jpg] are shown:
 
