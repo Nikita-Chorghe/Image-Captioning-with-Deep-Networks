@@ -25,3 +25,4 @@ Run the python code using the following command (make sure you are in image-capt
 
 
 # Image Captioning with Deep Networks
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/1.jpg"></img>
