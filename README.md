@@ -25,6 +25,20 @@ Run the python code using the following command (make sure you are in image-capt
 
 
 # Image Captioning with Deep Networks
+
+## INTRODUCTION
+Image captioning has made tremendous progress recently.It takes an input and gives text describing the content of the photo. It takes photo as input and outputs encoded representation of it that captures crucial features. This uses CNN architecture. Architecture consists of several CNN blocks which extracts various features from the image in different layer and eventually identifies elements in the image. After this sequence decoder outputs a sequence of tokens that describes the photo. It is basically Recurrent Network model consisting of a stack of LSTM layers fed by an Embedding layer. CNN process the image and LSTM operates on the sequence generated. Output of these two is combined in together with multi-model layer. 
+
+## II. INTRODUCTION AND BACKGROUND WORK
+A. Neural network models for captioning involve three main elements:
+The project has data in two forms. First a text file containing all the captions and second the images to be processes. Each image has 5 captions associated with it. We process the captions by breaking it into words and then remove all the punctuation and hanging words. After this we create word to vectors using a model called Word2Vec in gensim. We feed all our captions into this model and it uses the word corpus to give us the vector form of each word. We then convert our captions into vectors of size (Number of Words in Caption) * 100 where 100 is the size of each word vector. We also process the images to make all the images of the same size and of a fixed dimension which is needed for our CNN's first layer.
+
+Feature Extraction: Feature extraction model which is neural network that takes image as input and extract salient features in the form of a fixed-length vector. Convolution neural network is used to extract feature. CNN is trained directly on the images in data set
+
+
+Language Model: For image captioning, LSTM based model is used to predict the sequences of words from the feature vectors obtained from the VGG network.
+
+
 <img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/1.jpg"></img>
 <img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/2.jpg"></img>
 <img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/3.jpg"></img>
