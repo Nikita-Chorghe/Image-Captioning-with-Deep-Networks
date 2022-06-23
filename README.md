@@ -101,10 +101,10 @@ The results for the images listed [21164875.jpg, 21166859.jpg, 31720680.jpg, 865
 
 
 <img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/1.jpg"  width="200" height="200"></img>
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/2.jpg" ></img>
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/3.jpg"></img>
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/4.jpg"></img>
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/5.jpg"></img>
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/2.jpg" width="200" height="200"></img>
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/3.jpg" width="200" height="200"></img>
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/4.jpg" width="200" height="200"></img>
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/5.jpg" width="200" height="200"></img>
 <img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/LSTM.png"></img>
 <img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/vgg16 arch.png"></img>
 <img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/word_graph.jpg"></img>
