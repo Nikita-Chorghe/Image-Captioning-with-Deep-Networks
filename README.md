@@ -57,12 +57,51 @@ The model developed for the task will have two parts to it:
 
 Image Feature/Object Detector to extract key objects and features from the image 
 
-Natural Language Generator to determine a caption in English language using the image 
+Natural Language Generator to determine a caption in English language using the image features
+
+The output from the Image Feature/Object Detector will be the input for the Natural Language 
+Generator.
+
+Implementing Image Feature/Object Detector: RCNN, Fast RCNN, Faster RCNN, VGG net
+
+We used RNN for the image caption generation. Depending on the result and time permissibility, we further enhanced the RNN to caption video by splitting it into frames and also using self-attention mechanism. The architecture we used is encoder / decoder architecture.
+
+1. A network model that reads the photograph input and encodes the content into a 
+fixed-length vector using an internal representation.
+2. A network model that reads the encoded photograph and generates the textual description output.
+
+We are considering two methodologies for solving this issue.
+a) Inject Model: This model combines the encoded form of the image with each word. Here we treat the image feature vector on par with a word and predict the next word using this feature vector and previous word. In this RNN is primarily responsible for image conditioned caption generation.
+
+b) In this RNN purely handles the text generation part and CNN the image feature generation. 
+
+## CNN Layers and their Logic
+
+We have used the following layers in CNN: 
+1. Convolution
+2. Maxpool
+3. Flatten
+
+## CNN and RNN Execution Flow
+
+a) The input data has 2 parts : captions and the images themselves. The first step involves parsing the caption and converting the image to 3 * 112 * 112 dimensions and storing them together in a dictionary with the key being the image name.
+
+b) We are initially training the CNN using preloaded MNIST data so that the CNN can extract relevant features from images.
+
+c) We are then passing the previously processed 3 * 112 * 112 images through the trained CNN to generate feature vector for RNN to consume.
 
 
+## USAGE OF THE TRAINED MODEL
+ An image is passed as the CNN input and the features are extracted from the image using CNN. These extracted features are passed as input for forward pass of RNN's first LSTM unit and the input of this unit is our keyword startseq. Now the predicted RNN output is then compared with the entire vocabulary. We find the CosineSimilarity of the predicted vector with all the word vectors in vocabulary. The word with max similarity is then picked and printed. Now this becomes the input of the next LSTM and so on. We set a limit at 25 words maximum per sentence if endseq is not encountered before.
+ 
+ ## Result and Analysis
+ We have done multiple experiments by changing the size of our dataset. Due to the high complexity of the model architecture, the training time was very high. Our model took over 5 hours to run 10 iterations on dataset of 200 images. Unfortunately as a consequence of high training time, we limited our iteration count to 100. We tried 4 different sizes of dataset. The sizes used are [50, 200, 700, 1000].
+ 
+The results for the images listed [21164875.jpg, 21166859.jpg, 31720680.jpg, 86549526.jpg, 70995350.jpg] are shown:
 
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/1.jpg"></img>
-<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/2.jpg"></img>
+
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/1.jpg"  width="500" height="600"></img>
+<img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/2.jpg" ></img>
 <img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/3.jpg"></img>
 <img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/4.jpg"></img>
 <img src = "https://github.com/Nikita-Chorghe/Image-Captioning-with-Deep-Networks/blob/master/Images/5.jpg"></img>
