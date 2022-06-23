@@ -47,9 +47,17 @@ The first is the images which we will be captioning. We have 31,783 unique image
 Secondly we have a .csv file which holds the information about these images which will help us train the model. For each image we have maximum 5 unique captions i.e an image can be captioned as any one of the following.
 
 The .csv file has 3 fields:
-1. Name of the Image(Image name)
-2. The caption number(comment number)
-3. The caption(comment)
+1. Name of the Image (Image name)
+2. The caption number (comment number)
+3. The caption (comment)
+
+## Theoretical and conceptual study of the technique/algorithm you wouldlike to implement
+
+The model developed for the task will have two parts to it:
+
+Image Feature/Object Detector to extract key objects and features from the image 
+
+Natural Language Generator to determine a caption in English language using the image 
 
 
 
